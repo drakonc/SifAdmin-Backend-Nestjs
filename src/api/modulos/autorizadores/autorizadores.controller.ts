@@ -12,7 +12,7 @@ export class AutorizadoresController {
     constructor(private readonly _autService: AutorizadoresService) { }
 
     @Get()
-    ObtenerTodos(@Request() req): Promise<ReadAutorizadoresDto[]> {
+    ObtenerTodos(): Promise<ReadAutorizadoresDto[]> {
         return this._autService.ObtenerTodos();
     }
 
@@ -23,7 +23,7 @@ export class AutorizadoresController {
 
     @Post()
     @UsePipes(ValidationPipe)
-    CrearUno(@Body() newAutorizadores: CreateAutorizadoresDto) {
+    CrearUno(@Body() newAutorizadores: CreateAutorizadoresDto): Promise<ResI> {
         return this._autService.CrearUno(newAutorizadores);
     }
 
