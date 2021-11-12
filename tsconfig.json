@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "paths": {
+      "@database/*": ["src/api/database/*"],
+      "@config/*": ["src/api/config/*"],
+      "@modulos/*": ["src/api/modulos/*"],
+      "@enums/*": ["src/api/shared/enums/*"],
+      "@functions/*": ["src/api/shared/functions/*"],
+      "@interfaces/*": ["src/api/shared/interfaces/*"]
+    }
+  }
+}
